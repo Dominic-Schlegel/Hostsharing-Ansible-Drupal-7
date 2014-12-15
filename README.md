@@ -25,7 +25,7 @@ All needed parameters can be set in the inventory file now. Change xyz00 to the 
 
 The Option -i can be used now to read this inventory file instead of the /etc/ansible/hosts file. If we want to login with an SSH-Key instead of an SSH-Password, we have to remove the -k option from the following string. The -K is needed to prompt us once for the sudo password of the new user.
 
-To prepare everything for the Drupal installation we run:
+To prepare everything for the Drupal installation (including a mysql database) we run:
 
     $ ansible-playbook -i inventory playbook-drupal7.yml -k -K
 
@@ -33,7 +33,7 @@ Now we can reach the Drupal 7 installation script via:
 
     http://www.user.xyz00.hostsharing.net
 
-Ater we completed the interactive installation process its very important to change back some directory & file permissions:
+After we completed the interactive installation process its very important to change back some directory & file permissions:
 
     xyz00-user@h99:~/doms/user.xyz00.hostsharing.net/subs/www$ chmod 644 sites/default/settings.php
     xyz00-user@h99:~/doms/user.xyz00.hostsharing.net/subs/www$ chmod 755 sites/default
