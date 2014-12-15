@@ -19,7 +19,7 @@ Then we change the working directory:
 
     $ cd Hostsharing-Ansible-Drupal7
 
-All needed parameters can be set in the inventory file now. Change xyz00 to the name of your package admin. Set the name of a new user and a password. This username and password will be used in the database installation process too (database-name: packagename_username). Please consider changing them both (NewUser-password in HSAdmin and Database-password) after the installation. We can edit the inventory file with:
+All needed parameters can be set in the inventory file now. Change xyz00 to the name of your package admin. Set the name of a new user and a password. This username and password will be used in the database installation process too (database-name: xyz00_user). Please consider changing them both (NewUser-password in HSAdmin and Database-password) after the installation. We can edit the inventory file with:
 
     $ vim inventory
 
