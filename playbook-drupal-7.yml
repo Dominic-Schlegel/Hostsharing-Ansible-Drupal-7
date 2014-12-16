@@ -1,5 +1,5 @@
 ---
-- hosts: drupal7
+- hosts: drupal-7
   tasks:
   - name: ensure user exists
     hsuser.js: name="{{pac}}-{{user}}" password="{{password}}" exists="true"
