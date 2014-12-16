@@ -1,2 +1,2 @@
 [drupal-7]
-xyz00 ansible_ssh_host=xyz00.hostsharing.net ansible_ssh_user=xyz00 pac=xyz00 domain=drupal-7.xyz00.hostsharing.net user=drupal-7 password=testpassw0rd!?
+xyz00 ansible_ssh_host=xyz00.hostsharing.net ansible_ssh_user=xyz00 pac=xyz00 domain=drupal7.xyz00.hostsharing.net user=drupal7 password=testpassw0rd!?
