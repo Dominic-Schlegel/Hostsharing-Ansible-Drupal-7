@@ -1,5 +1,5 @@
-Hostsharing-Ansible-Drupal7
-===========================
+Hostsharing-Ansible-Drupal-7
+============================
 This Ansible playbook will install Drupal 7.34 on a server from www.hostsharing.net.
 
 To use these modules we have to create a file named ".hsadmin.properties" in the home directory of the package admins. In it we have to insert the packagename and password of the package admin. 
@@ -15,11 +15,11 @@ This file should be protected, else it would be world readable:
 
 We clone this git-repo to our machine:
 
-    $ git clone https://github.com/Dominic-Schlegel/Hostsharing-Ansible-Drupal7.git
+    $ git clone https://github.com/Dominic-Schlegel/Hostsharing-Ansible-Drupal-7.git
 
 Then we change the working directory:
 
-    $ cd Hostsharing-Ansible-Drupal7
+    $ cd Hostsharing-Ansible-Drupal-7
 
 All needed parameters can be set in the inventory file now. Change xyz00 to the name of your package admin. Set the name of a new user and a password. This username and password will be used in the database installation process too (database-name: xyz00_user). Please consider changing them both (NewUser-password in HSAdmin and Database-password) after the installation. We can edit the inventory file with:
 
@@ -29,7 +29,7 @@ The Option -i can be used now to read this inventory file instead of the /etc/an
 
 To prepare everything for the Drupal installation (including a mysql database) we run:
 
-    $ ansible-playbook -i inventory playbook-drupal7.yml -k -K
+    $ ansible-playbook -i inventory playbook-drupal-7.yml -k -K
 
 Now we can reach the Drupal 7 installation script via:
 
