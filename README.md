@@ -1,6 +1,6 @@
 Hostsharing-Ansible-Drupal-7
 ============================
-This Ansible playbook will install Drupal 7.34 on a server from www.hostsharing.net.
+This Ansible playbook will install Drupal 7.41 on a server from www.hostsharing.net.
 
 To use these modules we have to create a file named ".hsadmin.properties" in the home directory of the package admins. In it we have to insert the packagename and password of the package admin. 
 
