@@ -8,11 +8,11 @@
   - name: download drupal tarball
     sudo: yes
     sudo_user: "{{pac}}-{{user}}"
-    get_url: url=http://ftp.drupal.org/files/projects/drupal-7.34.tar.gz dest=/tmp/drupal-7.34.tgz sha256sum=34268d4f2917ad1417725885fe4dad78dd2fecb7b5a27c73627746d2cb1cb3b6
+    get_url: url=http://ftp.drupal.org/files/projects/drupal-7.41.tar.gz dest=/tmp/drupal-7.41.tgz
   - name: extract tarball
     sudo: yes
     sudo_user: "{{pac}}-{{user}}"
-    command: tar -xvzf /tmp/drupal-7.34.tgz chdir="/home/pacs/{{pac}}/users/{{user}}/doms/{{domain}}/subs"
+    command: tar -xvzf /tmp/drupal-7.41.tgz chdir="/home/pacs/{{pac}}/users/{{user}}/doms/{{domain}}/subs"
   - name: move to www
     sudo: yes
     sudo_user: "{{pac}}-{{user}}"
@@ -20,7 +20,7 @@
   - name: move to www
     sudo: yes
     sudo_user: "{{pac}}-{{user}}"
-    command: mv drupal-7.34 www chdir="/home/pacs/{{pac}}/users/{{user}}/doms/{{domain}}/subs"
+    command: mv drupal-7.41 www chdir="/home/pacs/{{pac}}/users/{{user}}/doms/{{domain}}/subs"
   - name: ensure database exists
     hsdatabase.js: name="{{pac}}_{{user}}" password="{{password}}" instance="mysql" exists="true"
   - name: copy default.settings.php to settings.php
@@ -31,11 +31,11 @@
     sudo: yes
     sudo_user: "{{pac}}-{{user}}"
     command: chmod 666 sites/default/settings.php chdir="/home/pacs/{{pac}}/users/{{user}}/doms/{{domain}}/subs/www"
-  - name: change directory permissions of sites/default 
+  - name: change directory permissions of sites/default
     sudo: yes
     sudo_user: "{{pac}}-{{user}}"
     command: chmod 666 sites/default chdir="/home/pacs/{{pac}}/users/{{user}}/doms/{{domain}}/subs/www"
-  - name: rename .htaccess to htaccess               
+  - name: rename .htaccess to htaccess
     sudo: yes
     sudo_user: "{{pac}}-{{user}}"
     command: mv .htaccess htaccess chdir="/home/pacs/{{pac}}/users/{{user}}/doms/{{domain}}/subs/www"
